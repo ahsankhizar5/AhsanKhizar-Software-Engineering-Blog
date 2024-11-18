@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovations in Software Engineering: A Student's Perspective</title>
+    <title id="main-title">Innovations in Software Engineering: A Student's Perspective</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Innovations in Software Engineering: A Student's Perspective</h1>
+        <h1 id="main-title">Innovations in Software Engineering: A Student's Perspective</h1>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <ul>
+        <ul id="nav-links">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./services.html">Services</a></li>
@@ -26,9 +26,9 @@
 
     <main>
         <!-- Content Container -->
-        <div class="content-container">
+        <div class="my-container">
             <!-- Content Area -->
-            <div class="content">
+            <div class="page-content">
                 <!-- About Author Section -->
                 <section class="about-author">
                     <h2>About Author</h2><br>
@@ -315,30 +315,10 @@
 </section>
 
 
-    
-    <!-- JavaScript -->
-     <script>
-    function toggleReadMore() {
-    const readMoreText = document.getElementById("read-more-text");
-    const btn = document.querySelector(".read-more-btn");
-    
-    if (readMoreText.classList.contains("open")) {
-    readMoreText.classList.remove("open");
-    btn.textContent = "Read more";
-    } else {
-    readMoreText.classList.add("open");
-    btn.textContent = "Read less";
-    }
-    }
-    </script><br><br>
-
-
-
-
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Ahsan Khizar. All rights reserved.</p>
+            <p id="footer-text">&copy; 2024 Ahsan Khizar. All rights reserved.</p>
             <p>Explore the latest trends and insights in software engineering.</p>
             <ul class="footer-links">
                 <li><a href="./privacy.html">Privacy Policy</a></li>
@@ -354,8 +334,35 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+    
+    <script>
+        function toggleReadMore() {
+            const readMoreText = document.getElementById("read-more-text");
+            const btn = document.querySelector(".read-more-btn");
 
-
+            if (readMoreText.classList.contains("open")) {
+                readMoreText.classList.remove("open");
+                btn.textContent = "Read more";
+            } else {
+                readMoreText.classList.add("open");
+                btn.textContent = "Read less";
+            }
+        }
+    </script><br><br>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById("my-container");
+            if (container) { // Always check!
+                // ... your code to append child elements ...
+            } else {
+                console.error("Element with ID 'my-container' not found.");
+            }
+        });
+    </script>
+    
 
 </body>
 
