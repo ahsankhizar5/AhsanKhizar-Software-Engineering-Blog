@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="main-title">Innovations in Software Engineering: A Student's Perspective</title>
+    <title>Innovations in Software Engineering: A Student's Perspective</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <h1 id="main-title">Innovations in Software Engineering: A Student's Perspective</h1>
+        <h1>Innovations in Software Engineering: A Student's Perspective</h1>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <ul id="nav-links">
+        <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./services.html">Services</a></li>
@@ -26,9 +26,9 @@
 
     <main>
         <!-- Content Container -->
-        <div class="my-container">
+        <div class="content-container">
             <!-- Content Area -->
-            <div class="page-content">
+            <div class="content">
                 <!-- About Author Section -->
                 <section class="about-author">
                     <h2>About Author</h2><br>
@@ -269,56 +269,86 @@
             </aside>
         </div>
     </main>
-    
+
 
     <!-- Read More/ Read Less Functionality -->
-<section class="innovations-section">
-    <h2>Innovations in Software Engineering</h2>
-    <p id="short-text">
-        Software engineering has evolved rapidly, with innovations transforming how we design, develop, and maintain
-        systems. The rise of cloud computing and agile methodologies has led to more efficient, scalable solutions that
-        allow for continuous integration and deployment, drastically improving software delivery cycles...
-    </p>
-    <p id="read-more-text" class="read-more-content">
-        Today, cloud-native applications have become the norm, leveraging platforms like AWS, Azure, and Google Cloud to
-        offer unparalleled scalability, flexibility, and resilience. In parallel, containerization technologies such as
-        Docker and Kubernetes are enabling microservice architectures that decouple system components, making them
-        easier to maintain and scale independently.
+    <section class="innovations-section">
+        <h2>Innovations in Software Engineering</h2>
+        <p id="short-text">
+            Software engineering has evolved rapidly, with innovations transforming how we design, develop, and maintain
+            systems. The rise of cloud computing and agile methodologies has led to more efficient, scalable solutions
+            that
+            allow for continuous integration and deployment, drastically improving software delivery cycles...
+        </p>
+        <p id="read-more-text" class="read-more-content">
+            Today, cloud-native applications have become the norm, leveraging platforms like AWS, Azure, and Google
+            Cloud to
+            offer unparalleled scalability, flexibility, and resilience. In parallel, containerization technologies such
+            as
+            Docker and Kubernetes are enabling microservice architectures that decouple system components, making them
+            easier to maintain and scale independently.
 
-        Another significant innovation is the use of artificial intelligence (AI) and machine learning (ML) in the
-        development lifecycle. AI-powered tools are automating various aspects of software engineering, from code
-        generation and optimization to automated testing and bug detection. For instance, predictive algorithms are
-        helping identify potential performance bottlenecks before they affect production environments, while intelligent
-        code analysis tools are flagging vulnerabilities in real-time.
+            Another significant innovation is the use of artificial intelligence (AI) and machine learning (ML) in the
+            development lifecycle. AI-powered tools are automating various aspects of software engineering, from code
+            generation and optimization to automated testing and bug detection. For instance, predictive algorithms are
+            helping identify potential performance bottlenecks before they affect production environments, while
+            intelligent
+            code analysis tools are flagging vulnerabilities in real-time.
 
-        DevOps practices, another major advancement, have broken down the traditional silos between development and
-        operations teams. By adopting continuous integration and continuous deployment (CI/CD) pipelines, organizations
-        are able to deliver features faster and with greater reliability. Automated testing, infrastructure as code
-        (IaC), and monitoring tools ensure that each iteration of software is stable, secure, and optimized.
+            DevOps practices, another major advancement, have broken down the traditional silos between development and
+            operations teams. By adopting continuous integration and continuous deployment (CI/CD) pipelines,
+            organizations
+            are able to deliver features faster and with greater reliability. Automated testing, infrastructure as code
+            (IaC), and monitoring tools ensure that each iteration of software is stable, secure, and optimized.
 
-        Looking ahead, the integration of blockchain technologies into software systems is set to transform how we
-        handle data security, transparency, and traceability. Blockchain's decentralized nature offers unprecedented
-        protection against cyber threats and unauthorized access, which is increasingly critical in industries like
-        finance, healthcare, and supply chain management.
+            Looking ahead, the integration of blockchain technologies into software systems is set to transform how we
+            handle data security, transparency, and traceability. Blockchain's decentralized nature offers unprecedented
+            protection against cyber threats and unauthorized access, which is increasingly critical in industries like
+            finance, healthcare, and supply chain management.
 
-        Moreover, quantum computing, though still in its early stages, holds the potential to exponentially accelerate
-        problem-solving capabilities in areas such as cryptography, complex simulations, and optimization problems. As
-        research progresses, quantum computing could redefine the boundaries of what software systems can achieve,
-        solving challenges that today's classical computers cannot handle efficiently.
+            Moreover, quantum computing, though still in its early stages, holds the potential to exponentially
+            accelerate
+            problem-solving capabilities in areas such as cryptography, complex simulations, and optimization problems.
+            As
+            research progresses, quantum computing could redefine the boundaries of what software systems can achieve,
+            solving challenges that today's classical computers cannot handle efficiently.
 
-        The future of software engineering is undeniably exciting, with a focus on automation, intelligence, and
-        modularity. With each technological breakthrough, the industry inches closer to realizing fully autonomous
-        systems that can adapt, learn, and evolve without constant human intervention. These innovations are not only
-        transforming how software is built but also shaping the future of industries worldwide.
-    </p>
-    <button class="read-more-btn" onclick="toggleReadMore()">Read more</button>
-</section>
+            The future of software engineering is undeniably exciting, with a focus on automation, intelligence, and
+            modularity. With each technological breakthrough, the industry inches closer to realizing fully autonomous
+            systems that can adapt, learn, and evolve without constant human intervention. These innovations are not
+            only
+            transforming how software is built but also shaping the future of industries worldwide.
+        </p>
+        <button class="read-more-btn" onclick="toggleReadMore()">Read more</button>
+    </section>
+
+
+
+    <!-- JavaScript -->
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+    <script>
+        function toggleReadMore() {
+            const readMoreText = document.getElementById("read-more-text");
+            const btn = document.querySelector(".read-more-btn");
+
+            if (readMoreText.classList.contains("open")) {
+                readMoreText.classList.remove("open");
+                btn.textContent = "Read more";
+            } else {
+                readMoreText.classList.add("open");
+                btn.textContent = "Read less";
+            }
+        }
+    </script><br><br>
+
+
 
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p id="footer-text">&copy; 2024 Ahsan Khizar. All rights reserved.</p>
+            <p>&copy; 2024 Ahsan Khizar. All rights reserved.</p>
             <p>Explore the latest trends and insights in software engineering.</p>
             <ul class="footer-links">
                 <li><a href="./privacy.html">Privacy Policy</a></li>
@@ -334,35 +364,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="./data.js"></script>
-    <script src="./script.js"></script>
-    
-    <script>
-        function toggleReadMore() {
-            const readMoreText = document.getElementById("read-more-text");
-            const btn = document.querySelector(".read-more-btn");
 
-            if (readMoreText.classList.contains("open")) {
-                readMoreText.classList.remove("open");
-                btn.textContent = "Read more";
-            } else {
-                readMoreText.classList.add("open");
-                btn.textContent = "Read less";
-            }
-        }
-    </script><br><br>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const container = document.getElementById("my-container");
-            if (container) { // Always check!
-                // ... your code to append child elements ...
-            } else {
-                console.error("Element with ID 'my-container' not found.");
-            }
-        });
-    </script>
-    
+
 
 </body>
 
