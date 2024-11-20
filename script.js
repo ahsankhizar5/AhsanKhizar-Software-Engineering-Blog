@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('./data.json')
+    fetch('./data.js')
         .then(response => response.json())
         .then(data => {
             // Main Title
@@ -49,5 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
         })
-        .catch(error => console.error('Error loading JSON:', error));
-});
+    });

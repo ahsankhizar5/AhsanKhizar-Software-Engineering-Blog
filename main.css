@@ -333,13 +333,3 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .page-content img {
-        width: 100%;
-        height: auto;
-    }
-}
